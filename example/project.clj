@@ -5,10 +5,12 @@
 
   :dependencies [[org.clojure/clojure "1.9.0"]]
   :plugins [[lein-junit "1.1.9"]]
+  :main app
 
   :java-source-paths ["src/main/java" "src/test/java"]
   :javac-options ["-target" "1.8" "-source" "1.8"]
   :source-paths ["src/main/clojure"]
+  :target-path "target/%s"
   :test-paths ["src/test/clojure/" "src/test/java"]
 
   :profiles {:dev {:dependencies [[junit/junit "4.12"]]}}

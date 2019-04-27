@@ -1,4 +1,6 @@
-(ns app)
+(ns app
+  (:gen-class)
+  (:import [me.gvillalta99 Application]))
 
 (defn -main [& args]
-  (print "Hello, World!"))
+  (Application/main args))
