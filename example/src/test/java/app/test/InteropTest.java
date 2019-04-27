@@ -1,14 +1,15 @@
 package app.test;
 
-import interop.Sample;
+import me.gvillalta.Application;
 
 import org.junit.Test;
+import static org.junit.Assert.*;
 
 public class InteropTest {
 
-    @Test(expected = UnsupportedOperationException.class)
+    @Test
     public void testInteropCall() {
-        Sample sample = new Sample();
-        sample.main(new String[] {"Clojure"});
+        Application app = new Application();
+        assertEquals(app.test(), 10);
     }
 }
